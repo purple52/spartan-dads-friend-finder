@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spartan Dads Xbox Live Friend Manager
 // @namespace    https://www.halowaypoint.com/en-us/spartan-companies/spartan%20dads
-// @version      0.9.2016-02-03
+// @version      0.10.2017-01-07
 // @description  Script to fetch all existing friends, and compare that list to the list of all Spartan Dads, and add the Dads not listed in your friends list.
 // @author       Vuris, WinkSomeIDunno and PurpleFiftyTwo
 // @match        https://account.xbox.com/*
