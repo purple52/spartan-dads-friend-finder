@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Spartan Dads Xbox Live Friend Manager
 // @namespace    https://github.com/purple52/spartan-dads-friend-finder
-// @version      0.10.2017-01-07
-// @description  Script to fetch all existing friends, and compare that list to the list of all Spartan Dads, and add the Dads not listed in your friends list.
+// @version      0.11.2017-06-01
+// @description  Script to fetch all existing friends, and compare that list to the list of all Spartan Dads, and add the members not listed in your friends list.
 // @author       Vuris, WinkSomeIDunno and PurpleFiftyTwo
 // @match        https://account.xbox.com/*
 // @match        https://www.halowaypoint.com/en-us/spartan-companies/*
@@ -77,7 +77,7 @@
  * problemName declaration and removing that specific GamerTag. If the system is
  * stuck somewhere else, you can always reset all the variables to clear (not
  * importing) by visting the clean spot:
- * (https://account.xbox.com/en-US/Friends?xr=socialtwistnav&CLEAMNE)
+ * (https://account.xbox.com/en-US/Friends?xr=socialtwistnav&CLEANME)
  *
  * Any questions or concerns drop me a line in XBox Live. In fact, I'd love to
  * hear from anyone who finds this useful. I'm Vuris.
@@ -93,6 +93,9 @@ targetCompanies.push("spartan%20dads");
 targetCompanies.push("spartan%20dads%202");
 targetCompanies.push("spartan%20dads%203");
 targetCompanies.push("spartan%20dads%204");
+targetCompanies.push("undivided");
+targetCompanies.push("C%20You%20Next%20Tuesday");
+
 
 var skipGamerTags = [];
 // skipGamerTags.push = "SOMEGAMERTAG";
@@ -432,7 +435,8 @@ if (profileCheck!=-1){
             if (addFriendButton) {
                 triggerMouseEvent (addFriendButton, "click");
                 setTimeout(function(){
-                    if(document.getElementById('addFriend')){
+                    var button = document.getElementById('addFriend');
+                    if(button && !(button.offsetHeight === 0 && button.offsetWidth === 0)){
                         window.location.reload();
                         return;
                     } else {
@@ -459,3 +463,4 @@ if(debug){
     console.log('We are on a page that qualifies under the match, but is not a target URL for this process.');
 }
 return;
+
