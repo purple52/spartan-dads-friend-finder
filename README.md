@@ -5,7 +5,7 @@ and has only been tested on *Chrome*; it probably doesn't work on Firefox, Inter
 
 ## Usage
 
-1. Install the Tampermonkey extension by visiting https://tampermonkey.net/ and downloading the latest stable version.
+1. Using **Chrome** (not Firefox, IE, Edge, or Safari), install the Tampermonkey extension by visiting https://tampermonkey.net/ and downloading the latest stable version.
 2. Download the script via this link:
 
     https://github.com/purple52/spartan-dads-friend-finder/raw/master/Spartan%20Dads%20Xbox%20Live%20Friend%20Manager.user.js
