@@ -92,11 +92,9 @@
 
 var targetCompanies = [];
 targetCompanies.push("spartan%20dads");
-targetCompanies.push("spartan%20dads%202");
-targetCompanies.push("spartan%20dads%203");
+targetCompanies.push("spartan%20dads%20osiris");
 targetCompanies.push("spartan%20dads%204");
 targetCompanies.push("undivided%20sd");
-targetCompanies.push("C%20You%20Next%20Tuesday");
 
 
 var skipGamerTags = [];
